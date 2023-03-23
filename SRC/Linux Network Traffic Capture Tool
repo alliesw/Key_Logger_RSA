@@ -1,1 +1,39 @@
-Filter DNS Traffic > tcpdump 
+Capture DNS Traffic on UDP Port 53 [plaintext > encrypt text]
+IN KALI LINUX - ROOT USER ACCOUNT: 
+$ sudo apt install tcpdump 
+
+# tcpdump
+sudo tcpdump -i eth0 
+Ctrl+C =stop 
+sudo tcpdump -i eth0 -vn
+
+>filtering to only capture DNS traffic 
+# tcpdump -i eth0 udp port 53
+
+> filter a specific domain name from DNS query traffic  
+$ sudo tcpdump -i eth0 -vn host 8.8.8.8 and port 53 &
+jobs -l
+>note down job id of above process in the list 
+
+> return list of all records for the domain 
+dig @8.8.8.8 A example.com
+fg % [job-id]
+
+> saving captured packets 
+$ sudo tcpdump -i eth0 port 80 -w http.pcap &
+jobs -l
+curl example.com
+fg % [job-id]
+
+> read from file
+tcpdump -r http.pcap -nv
+
+FOR SECURE TRANSPORT
+>Encrypt the plain text DNS traffic by using DoH (DNS over HTTPS - port 443) & DoT (DNS over TLS - port 853)
+
+echo AAABAAABAAAAAAAAB2V4YW1wbGUEdGVzdAAAAQAB | base64 --decode |
+ curl -is --data-binary @- -H 'content-type: application/dns-message' \
+   https://dns.google/dns-query
+   
+dig +noedns example.com A
+curl -i https://dns.google/dns-query?dns=AAABAAABAAAAAAAAB2V4YW1wbGUDY29tAAABAAE   
