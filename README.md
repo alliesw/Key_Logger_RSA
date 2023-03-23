@@ -19,5 +19,6 @@ Network Traffic Capture Tool - DNS Zone transfers
 # REQUIREMENTS
 ==============
 #Linux-based OS or Kali Linux VirtualBox  
-#Python 3.7 or higher: https://www.python.org/downloads/
-#OpenSSH                                                                                                                                                                              
+#Python 3.7 Kali extension or https://www.python.org/downloads/
+#OpenSSH  
+
