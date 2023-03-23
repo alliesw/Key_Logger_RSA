@@ -1,4 +1,4 @@
-#Windows Keylogger 
+#Windows Keylogger & a Linux Network Traffic Capture Tool 
 =================
 
 #FEATURES
@@ -14,3 +14,10 @@
 #pyHook Module: http://sourceforge.net/projects/pyhook/
 #PythonCOM Module: http://sourceforge.net/projects/pywin32/ 
 #Platform: Windows 
+
+Network Traffic Capture Tool - DNS Zone transfers 
+# REQUIREMENTS
+==============
+#Linux-based OS or Kali Linux VirtualBox  
+#Python 3.7 or higher: https://www.python.org/downloads/
+#OpenSSH                                                                                                                                                                              
