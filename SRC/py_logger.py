@@ -12,7 +12,7 @@
 ===================
 #Python 3.7 or higher: https://www.python.org/downloads/
 #pyHook Module: http://sourceforge.net/projects/pyhook/
-#PythonCOM Module: http://sourceforge.net/projects/pywin32/ 
+#PythonCOM Module: https://github.com/mammond/pywin32/releases/
 #Platform: Windows 
 
 # Shows the popular functions used in the pythoncom Module: https://www.programcreek.com/python/index/427/pythoncom
